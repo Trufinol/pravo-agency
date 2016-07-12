@@ -3,28 +3,28 @@
   background-color: #f5f5f5;
   width: 100%;
   padding-top: 45px;
-  padding-left: 7.377419em;
-  padding-right: 4.838709677419355em;
+  padding-left: 120px;
+  padding-right: 60px;
   color: $black;
 
   .header--logo img {
     width: 110px;
     height: 52px;
-
   }
-
   .main-menu {
-    float: right;
+    margin: 0 auto;
+    max-width: 1260px;
     display: table;
-    width: 36.5em;
+    width: 100%;
+    position: relative;
+    z-index: 1;
     @include clearfix;
     ul {
-
+      text-align: right;
       text-transform: uppercase;
       display: table-cell;
       margin: 0;
       vertical-align: middle;
-
       li {
         font-weight: bold;
         list-style: none;
@@ -35,10 +35,9 @@
         &:last-child {
           margin-right: 120px;
         }
-
         a {
           font-family: "GothamPro";
-          font-size: 15px;
+          font-size: 12px;
           font-weight: 600;
           color: $black;
           transition: color .2s;
@@ -53,7 +52,7 @@
       display: inline-block;
       width: 60px;
       height: 34px;
-
+      top: -0.625em;
       input {display:none;}
       a {
         display: inline-block;
@@ -78,39 +77,45 @@
       -webkit-transition: .2s;
       transition: .2s;
       border-radius: 34px;
+      &:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 9px;
+        bottom: 5px;
+        background-color: #dfdfe2;
+        -webkit-transition: .2s;
+        transition: .2s;
+        border-radius: 50%;
     }
 
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 20px;
-      width: 20px;
-      left: 7px;
-      bottom: 5px;
-      background-color: #dfdfe2;
-      -webkit-transition: .2s;
-      transition: .2s;
-      border-radius: 50%;
     }
 
     input:checked + .slider:before {
-      -webkit-transform: translateX(31px);
-      -ms-transform: translateX(31px);
-      transform: translateX(31px);
+      -webkit-transform: translateX(28px);
+      -ms-transform: translateX(28px);
+      transform: translateX(28px);
     }
   }
   .header--content {
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1260px;
     position: relative;
     @include clearfix;
+    .header--content-wrapper {
+      float: left;
+      width: 500px;
+    }
     .entry-header {
       font-family: "GothamPro";
       margin-top: 75px;
-      margin-bottom: 58px;
+      margin-bottom: 44px;
       font-size: 30px;
       font-weight: bold;
       width: 305px;
-      @include underline(32px);
+      float: left;
+      @include underline(33px);
     }
     .header--content--text {
       font-family: "GothamPro";
@@ -118,15 +123,31 @@
       font-size: 15px;
       line-height: 1.6;
       width: 450px;
+      float: left;
     }
-    .header-image {
+    .header--image {
       float: right;
       width: 40%;
       max-width: 410px;
-      position: absolute;
-      right: 4%;
-      top: -7%;
     }
-
+    .header--price {
+      cursor: pointer;
+      border: 0;
+      outline: none;
+      float: left;
+      background-color: $accent-color;
+      border-radius: 30px;
+      height: 50px;
+      width: 180px;
+      padding-left: 50px;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-family: "GothamProBlack";
+      font-size: 11px;
+      background-image: url(/assets/svg/price.svg);
+      background-repeat: no-repeat;
+      background-position: 17px 13px;
+      margin: 33px 0;
+    }
   }
 }

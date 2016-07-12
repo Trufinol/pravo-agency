@@ -1,11 +1,6 @@
 @import "fonts";
 @import "mixins1";
 
-// @include font-face("GothamPro", fonts/GothamPro, 500, normal, ttf eot);
-// @include font-face("GothamPro-Black", fonts/GothamPro-Black, ttf eot);
-// @include font-face("GothamPro-Medium", fonts/GothamPro-Medium, 500, normal, ttf eot);
-// @include font-face("iconSet", fonts/iconSet);
-
 @font-face {
     font-family: "GothamPro";
     src: url("fonts/GothamPro/GothamPro.eoy") format("eot"),
