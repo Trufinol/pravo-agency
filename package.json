@@ -1,0 +1,19 @@
+{
+  "name": "pravo-agency",
+  "version": "1.0.0",
+  "description": "landong page markup",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikolay Verteba",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
