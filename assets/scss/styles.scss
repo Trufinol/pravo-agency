@@ -1,0 +1,61 @@
+@import "fonts";
+@import "mixins1";
+
+// @include font-face("GothamPro", fonts/GothamPro, 500, normal, ttf eot);
+// @include font-face("GothamPro-Black", fonts/GothamPro-Black, ttf eot);
+// @include font-face("GothamPro-Medium", fonts/GothamPro-Medium, 500, normal, ttf eot);
+// @include font-face("iconSet", fonts/iconSet);
+
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamPro/GothamPro.eoy") format("eot"),
+         url("fonts/GothamPro/GothamPro.woff") format("woff"),
+         url("fonts/GothamPro/GothamPro.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamProMedium/GothamProMedium.eoy") format("eot"),
+         url("fonts/GothamProMedium/GothamProMedium.woff") format("woff"),
+         url("fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamProBold/GothamProBold.eoy") format("eot"),
+         url("fonts/GothamProBold/GothamProBold.otf") format("otf"),
+         url("fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+    font-weight: bold;
+}
+// @font-face {
+//     font-family: "GothamPro";
+//     src: url("fonts/GothamProBold/GothamProBold.eoy") format("eot"),
+//          url("fonts/GothamProBold/GothamProBold.woff") format("woff"),
+//          url("fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+//     font-weight: bolder;
+// }
+@font-face {
+    font-family: "GothamProBlack";
+    src: url("fonts/GothamProBlack/GothamProBlack.eoy") format("eot"),
+         url("fonts/GothamProBlack/GothamProBlack.woff") format("woff"),
+         url("fonts/GothamProBlack/GothamProBlack.ttf") format("truetype"),
+}
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamProRegular/GothamProRegular.eoy") format("eot"),
+         url("fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
+         url("fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+    font-weight: lighter;
+}
+
+@import "header";
+
+* {
+  box-sizing: border-box;
+}
+body {
+    font-family: "GothamProBlack";
+}
+a {
+  text-decoration: none;
+}

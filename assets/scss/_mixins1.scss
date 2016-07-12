@@ -1,0 +1,24 @@
+$accent-color: #a70c5d;
+$icon-inactive: #b6b6bb;
+$black: #3f4147;
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin underline($top) {
+  &:after {
+    content: "";
+    position: relative;
+    top: $top;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}
