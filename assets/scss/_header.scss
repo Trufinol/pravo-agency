@@ -36,7 +36,6 @@
           margin-right: 120px;
         }
         a {
-          font-family: "GothamPro";
           font-size: 12px;
           font-weight: 600;
           color: $black;
@@ -108,25 +107,22 @@
       width: 500px;
     }
     .entry-header {
-      font-family: "GothamPro";
       margin-top: 75px;
       margin-bottom: 44px;
       font-size: 30px;
       font-weight: bold;
       width: 305px;
       float: left;
-      @include underline(33px);
+      @include underline(33px, "");
     }
     .header--content--text {
-      font-family: "GothamPro";
       font-weight: lighter;
-      font-size: 15px;
       line-height: 1.6;
       width: 450px;
       float: left;
     }
     .header--image {
-      float: right;
+      margin-left: 93px;
       width: 40%;
       max-width: 410px;
     }
@@ -142,7 +138,6 @@
       padding-left: 50px;
       color: #ffffff;
       text-transform: uppercase;
-      font-family: "GothamProBlack";
       font-size: 11px;
       background-image: url(/assets/svg/price.svg);
       background-repeat: no-repeat;

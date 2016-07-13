@@ -11,9 +11,11 @@ $black: #3f4147;
   }
 }
 
-@mixin underline($top) {
+@mixin underline($top, $margin) {
   &:after {
+    margin: $margin;
     content: "";
+    text-align: center;
     position: relative;
     top: $top;
     display: block;

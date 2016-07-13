@@ -1,0 +1,98 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 1260px;
+}
+.divider {
+    border: 1px solid #f4f4f4;
+}
+.services {
+    color: $black;
+    .services-headline {
+        font-size: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        @include underline(20px, 0 auto);
+        margin-bottom: 40px;
+    }
+    .services-text {
+        width: 575px;
+        text-align: center;
+        margin: 0 auto 60px;
+    }
+}
+.services-grid {
+    @include clearfix;
+    .services-item {
+        position: relative;
+      //  border: 1px solid black;
+        height: 230px;
+        width: 49%;
+        padding-left: 100px;
+        padding-right: 80px;
+        float: left;
+          i {
+              cursor: pointer;
+              font-family: "icons";
+              font-size: 44px;
+              color: #a5a6ac;
+              position: absolute;
+              left: 30px;
+              top: 10px;
+              transition: color .25s;
+              &:hover {
+                color: $accent-color;
+              }
+        }
+        @at-root .dotted-right:after {
+          display: block;
+          position: absolute;
+          top: 25px;
+          right: 15px;
+          content: "";
+          height: 180px;
+          width: 2px;
+          border-left: 2px dotted #d0d1d3;
+        }
+        .services-item-headline {
+            text-transform: uppercase;
+            width: 365px;
+            &:after {
+                content: "i";
+                font-family: "Times New Roman";
+                text-transform: lowercase;
+                line-height: 1.55;
+                display: inline-block;
+                text-align: center;
+                font-weight: bold;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                border: 2px solid $accent-color;
+                position: absolute;
+                top: 25px;
+                right: 80px;
+            }
+        }
+        .services-item-list {
+            padding-left: 20px;
+            li {
+                list-style: none;
+                position: relative;
+                line-height: 1.5;
+                &:before {
+                    box-sizing: border-box;
+                    position: absolute;
+                    content: "";
+                    height: 7px;
+                    width: 7px;
+                    display: block;
+                    border-radius: 50%;
+                    border: 2px solid $accent-color;
+                    top: 7px;
+                    left: -17px;
+                }
+            }
+        }
+    }
+}

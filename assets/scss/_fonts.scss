@@ -1,44 +1,41 @@
-// =============================================================================
-// String Replace
-// =============================================================================
-
-@function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-
-	@return $string;
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamPro/GothamPro.eoy") format("eot"),
+         url("fonts/GothamPro/GothamPro.woff") format("woff"),
+         url("fonts/GothamPro/GothamPro.ttf") format("truetype");
+    font-weight: normal;
 }
-
-// =============================================================================
-// Font Face
-// =============================================================================
-
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
-	$src: null;
-
-	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
-	);
-
-	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
-	);
-
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
-
-	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
-		src: $src;
-	}
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamProMedium/GothamProMedium.eoy") format("eot"),
+         url("fonts/GothamProMedium/GothamProMedium.woff") format("woff"),
+         url("fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamProBold/GothamProBold.eoy") format("eot"),
+         url("fonts/GothamProBold/GothamProBold.otf") format("otf"),
+         url("fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+    font-weight: bold;
+}
+// @font-face {
+//     font-family: "GothamPro";
+//     src: url("fonts/GothamProBold/GothamProBold.eoy") format("eot"),
+//          url("fonts/GothamProBold/GothamProBold.woff") format("woff"),
+//          url("fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+//     font-weight: bolder;
+// }
+@font-face {
+    font-family: "GothamProBlack";
+    src: url("fonts/GothamProBlack/GothamProBlack.eoy") format("eot"),
+         url("fonts/GothamProBlack/GothamProBlack.woff") format("woff"),
+         url("fonts/GothamProBlack/GothamProBlack.ttf") format("truetype"),
+}
+@font-face {
+    font-family: "GothamPro";
+    src: url("fonts/GothamProRegular/GothamProRegular.eoy") format("eot"),
+         url("fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
+         url("fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+    font-weight: lighter;
 }
