@@ -190,7 +190,7 @@
   max-width: 410px;
 }
 
-#header .header--content .header--price {
+.btn-round {
   cursor: pointer;
   border: 0;
   outline: none;
@@ -199,14 +199,18 @@
   border-radius: 30px;
   height: 50px;
   width: 180px;
-  padding-left: 50px;
   color: #ffffff;
   text-transform: uppercase;
+  font-weight: bold;
   font-size: 11px;
-  background-image: url("../../../../assets/svg/price.svg");
   background-repeat: no-repeat;
   background-position: 17px 13px;
   margin: 33px 0;
+}
+
+#header .header--content .header-price {
+  padding-left: 30px;
+  background-image: url("../../../../assets/svg/price.svg");
 }
 
 .wrapper {
@@ -222,14 +226,15 @@
   color: #3f4147;
 }
 
-.services .services-headline {
+.headline-wrapper .headline {
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 50px;
 }
 
-.services .services-headline:after {
+.headline-wrapper .headline:after {
   margin: 0 auto;
   content: "";
   text-align: center;
@@ -241,10 +246,14 @@
   background-color: #a70c5d;
 }
 
-.services .services-text {
+.headline-wrapper .headline-text {
   width: 575px;
   text-align: center;
   margin: 0 auto 60px;
+}
+
+.services-grid {
+  position: relative;
 }
 
 .services-grid:after {
@@ -255,10 +264,12 @@
 
 .services-grid .services-item {
   position: relative;
-  height: 230px;
+  border-bottom: 1px dashed #d0d1d3;
+  height: 250px;
   width: 49%;
+  padding-top: 30px;
   padding-left: 100px;
-  padding-right: 80px;
+  padding-right: 30px;
   float: left;
 }
 
@@ -269,8 +280,8 @@
   color: #a5a6ac;
   position: absolute;
   left: 30px;
-  top: 10px;
-  transition: color .25s;
+  top: 35px;
+  transition: color 0.25s;
 }
 
 .services-grid .services-item i:hover {
@@ -278,47 +289,48 @@
 }
 
 .dotted-right:after {
+  box-sizing: border-box;
   display: block;
   position: absolute;
-  top: 25px;
-  right: 15px;
+  top: 35px;
+  right: 0;
   content: "";
   height: 180px;
   width: 2px;
-  border-left: 2px dotted #d0d1d3;
+  border-left: 1px dashed #d0d1d3;
 }
 
 .services-grid .services-item .services-item-headline {
+  font-size: 15px;
   text-transform: uppercase;
-  width: 365px;
+  width: 320px;
 }
 
-.services-grid .services-item .services-item-headline:after {
-  content: "i";
-  font-family: "Times New Roman";
-  text-transform: lowercase;
-  line-height: 1.55;
+.services-grid .services-item .info-icon {
   display: inline-block;
-  text-align: center;
-  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  right: 80px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   box-sizing: border-box;
   border: 2px solid #a70c5d;
-  position: absolute;
-  top: 25px;
-  right: 80px;
+  text-align: center;
 }
 
-.services-grid .services-item .services-item-list {
-  padding-left: 20px;
+.services-grid .services-item .info-icon:after {
+  content: "i";
+  font-family: "Times New Roman";
+  text-transform: lowercase;
+  line-height: 1.65;
+  font-weight: bold;
 }
 
 .services-grid .services-item .services-item-list li {
   list-style: none;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .services-grid .services-item .services-item-list li:before {
@@ -332,6 +344,71 @@
   border: 2px solid #a70c5d;
   top: 7px;
   left: -17px;
+}
+
+.services-grid .services-price-table {
+  font-size: 13px;
+}
+
+.services-grid .services-price-table span.price {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.services-grid .services-price-table td {
+  padding-bottom: 35px;
+}
+
+.services-grid .modal {
+  position: absolute;
+  top: 0;
+  height: 500px;
+  background-color: white;
+  border-right: 1px solid #ae206a;
+}
+
+.services-grid .modal:after,
+.services-grid .modal:before {
+  left: 100%;
+  top: 14%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.services-grid .modal:after {
+  border-color: transparent;
+  border-left-color: #fff;
+  border-width: 8px;
+  margin-top: -22px;
+}
+
+.services-grid .modal:before {
+  border-color: transparent;
+  border-left-color: #ae206a;
+  border-width: 9px;
+  margin-top: -23px;
+}
+
+.services-grid .modal .modal-headline {
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.services-grid .modal .row-name {
+  vertical-align: middle;
+  padding-right: 30px;
+  font-size: 12px;
+  font-family: "GothamProBlack";
+  text-transform: uppercase;
+}
+
+.services-grid .modal .btn-order {
+  margin-left: 90px;
 }
 
 * {

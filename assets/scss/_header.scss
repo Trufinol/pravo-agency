@@ -126,7 +126,7 @@
       width: 40%;
       max-width: 410px;
     }
-    .header--price {
+  @at-root .btn-round {
       cursor: pointer;
       border: 0;
       outline: none;
@@ -135,14 +135,17 @@
       border-radius: 30px;
       height: 50px;
       width: 180px;
-      padding-left: 50px;
       color: #ffffff;
       text-transform: uppercase;
+      font-weight: bold;
       font-size: 11px;
-      background-image: url(/assets/svg/price.svg);
       background-repeat: no-repeat;
       background-position: 17px 13px;
       margin: 33px 0;
+    }
+    .header-price {
+    padding-left: 30px;
+    background-image: url(/assets/svg/price.svg);
     }
   }
 }
