@@ -36,6 +36,25 @@
   color: #3f4147;
 }
 
+#header .play-video-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transition: box-shadow .2s ease-in;
+  margin-left: -45px;
+  margin-top: -45px;
+  height: 90px;
+  width: 90px;
+  background-image: url("../../../../assets/img/play-btn.png");
+  background-position: center;
+}
+
+#header .play-video-btn:hover {
+  box-shadow: 0 4px 10px 5px rgba(0,0,0,0.2);
+}
+
 #header .header--logo img {
   width: 110px;
   height: 52px;
@@ -206,6 +225,12 @@
   background-repeat: no-repeat;
   background-position: 17px 13px;
   margin: 33px 0;
+  transition: transform  .2s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-round:hover {
+  transform: translate(0, -10px);
+  box-shadow: 0 25px 15px -15px rgba(0,0,0,0.25);
 }
 
 #header .header--content .header-price {
@@ -409,6 +434,97 @@
 
 .services-grid .modal .btn-order {
   margin-left: 90px;
+}
+
+.testimonials:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.testimonials .feedback-item {
+  min-height: 317px;
+  padding-left: 15px;
+  margin-top: 15px;
+  width: 33%;
+  float: left;
+}
+
+.testimonials .feedback-item:hover .feedback-name,
+.testimonials .feedback-item:hover .feedback-content:before {
+  color: #a70c5d;
+}
+
+.testimonials .feedback-item .feedback-content {
+  position: relative;
+  margin: 0 0 15px;
+  padding-right: 80px;
+  padding-top: 45px;
+  line-height: 1.47;
+}
+
+.testimonials .feedback-item .feedback-content:before {
+  font-family: "icons";
+  color: #c9cacf;
+  content: "\e909";
+  position: absolute;
+  top: 10px;
+  transition: color 0.3s;
+}
+
+.testimonials .feedback-item .feedback-video:before {
+  content: "\e908";
+  font-size: 19px;
+  top: 5px;
+}
+
+.testimonials .feedback-item .feedback-video-preview {
+  content: "";
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  background-image: url("../../../../assets/img/play-btn-dark.png");
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 42px;
+}
+
+.testimonials .feedback-item .feedback-img {
+  margin-top: 50px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonials .feedback-name {
+  font-size: 13px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.testimonials .feedback-position {
+  font-size: 12px;
+}
+
+.testimonials .feedback-position span {
+  color: #a70c5d;
+}
+
+.testimonials .load-more-btn {
+  width: 130px;
+  margin: 0 auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.testimonials .load-more-btn:hover i.icon-loadmore:before {
+  transition: transform .4s ease-in-out;
+  transform: rotate(360deg);
 }
 
 * {

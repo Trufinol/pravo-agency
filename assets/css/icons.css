@@ -48,3 +48,9 @@ i {
 .icon-report:before {
     content: "\e907";
 }
+.icon-loadmore:before {
+  display: inline-block;
+    content: "\e90a";
+    font-size: 15px;
+    color: #a70c5d;
+}
