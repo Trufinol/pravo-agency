@@ -7,21 +7,20 @@
 }
 .services {
     color: $black;
-  @at-root .headline-wrapper {
-        .headline {
+  @at-root .headline {
             font-size: 28px;
             text-align: center;
             text-transform: uppercase;
             @include underline(20px, 0 auto);
             margin-bottom: 40px;
             margin-top: 50px;
+            &+.headline-text {
+                width: 575px;
+                text-align: center;
+                margin: 0 auto 60px;
+            }
         }
-        .headline-text {
-            width: 575px;
-            text-align: center;
-            margin: 0 auto 60px;
-        }
-    }
+
 }
 .services-grid {
     position: relative;

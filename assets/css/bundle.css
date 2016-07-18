@@ -251,7 +251,7 @@
   color: #3f4147;
 }
 
-.headline-wrapper .headline {
+.headline {
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;
@@ -259,7 +259,7 @@
   margin-top: 50px;
 }
 
-.headline-wrapper .headline:after {
+.headline:after {
   margin: 0 auto;
   content: "";
   text-align: center;
@@ -271,7 +271,7 @@
   background-color: #a70c5d;
 }
 
-.headline-wrapper .headline-text {
+.headline+.headline-text {
   width: 575px;
   text-align: center;
   margin: 0 auto 60px;
@@ -442,6 +442,12 @@
   clear: both;
 }
 
+.testimonials .feedback:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .testimonials .feedback-item {
   min-height: 317px;
   padding-left: 15px;
@@ -514,8 +520,9 @@
 }
 
 .testimonials .load-more-btn {
+  margin-top: 50px;
   width: 130px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 12px;
@@ -525,6 +532,72 @@
 .testimonials .load-more-btn:hover i.icon-loadmore:before {
   transition: transform .4s ease-in-out;
   transform: rotate(360deg);
+}
+
+.contact-us:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#contact-form {
+  width: 820px;
+  margin: 0 auto;
+}
+
+#contact-form .contact-form-inputs {
+  float: left;
+  width: 385px;
+  border: none;
+}
+
+#contact-form .contact-form-inputs input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 30px;
+  display: block;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #dcdcdc;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #3f4147;
+  font-weight: bold;
+  outline: none;
+}
+
+#contact-form .contact-form-inputs input[placeholder] {
+  color: #3f4147;
+}
+
+#contact-form .radio-input {
+  padding: 0;
+}
+
+#contact-form .radio-input .radio-input-header {
+  padding: 15px 20px;
+  border: 1px solid #dcdcdc;
+  width: 100%;
+}
+
+#contact-form .radio-input .contact-form-message {
+  border: none;
+  width: 385px;
+}
+
+#contact-form .radio-input .contact-form-message legend {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#contact-form .radio-input .contact-form-message textarea {
+  border-color: #dcdcdc;
+  float: left;
+  padding: 15px;
+  outline: none;
 }
 
 * {

@@ -1,0 +1,55 @@
+.contact-us {
+    @include clearfix;
+}
+#contact-form {
+    width: 820px;
+    margin: 0 auto;
+    .contact-form-inputs {
+        float: left;
+        width: 385px;
+        border: none;
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            height: 30px;
+            display: block;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid #dcdcdc;
+            text-transform: uppercase;
+            font-size: 11px;
+            line-height: 1.8;
+            color: #3f4147;
+            font-weight: bold;
+            outline: none;
+        }
+        input[placeholder] {
+            color: #3f4147;
+        }
+    }
+    .radio-input {
+        padding: 0;
+        .contact-form-radio {}
+        .radio-input-header {
+            padding: 15px 20px;
+            border: 1px solid #dcdcdc;
+            width: 100%;
+        }
+        .contact-form-message {
+            border: none;
+            width: 385px;
+            legend {
+                font-size: 11px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            textarea {
+                border-color: #dcdcdc;
+                float: left;
+                padding: 15px;
+                outline: none;
+            }
+        }
+    }
+}
